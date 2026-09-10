@@ -1,0 +1,38 @@
+/* ============================================================
+   CSM BRUTALIST — typography.css
+   Archivo Black for shouted, uppercase display type.
+   Space Grotesk for everything functional (nav, body, buttons).
+   IBM Plex Mono used sparingly, as a credit-line / stamp voice.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-display: 'Archivo Black', 'Arial Black', sans-serif;
+  --font-sans:    'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Fluid display scale — matches the site's clamp() usage */
+  --fs-hero:      clamp(2.375rem, 6vw, 4.875rem);  /* @kind font */ /* 38px \u2192 78px */
+  --fs-h1:        clamp(1.875rem, 4vw, 2.75rem);   /* @kind font */ /* 30px \u2192 44px */
+  --fs-h2:        clamp(1.75rem, 4vw, 2.5rem);     /* @kind font */ /* 28px \u2192 40px */
+  --fs-h3:        clamp(1.375rem, 3vw, 1.75rem);   /* @kind font */ /* 22px \u2192 28px */
+  --fs-h4:        1.125rem;                         /* 18px, card titles */
+
+  --fs-body-lg:   1.125rem;  /* 18px hero dek */
+  --fs-body:      1rem;      /* 16px partnership dek */
+  --fs-body-sm:   0.9375rem; /* 15px detail-panel body */
+  --fs-small:     0.875rem;  /* 14px card body copy */
+  --fs-caption:   0.8125rem; /* 13px small labels, nav */
+  --fs-micro:     0.6875rem; /* 11px credit line, meta */
+
+  --lh-tight:  0.98;  /* @kind font */ /* display headlines */
+  --lh-snug:   1.15;  /* @kind font */ /* card/panel titles */
+  --lh-body:   1.55;  /* @kind font */ /* paragraphs */
+  --lh-loose:  1.65;  /* @kind font */ /* long-form bios */
+
+  --tracking-label: 0.12em;  /* uppercase eyebrows/kickers */
+  --tracking-wide:  0.06em;  /* button/nav labels */
+  --tracking-tight: -0.02em; /* display headlines */
+
+  --case-display: uppercase; /* @kind other */ /* Archivo Black is always set uppercase in this system */
+}

@@ -1,0 +1,30 @@
+/* ============================================================
+   CSM BRUTALIST — spacing_and_shape.css
+   4px base spacing scale. Zero corner radius everywhere:
+   sharpness is the point. Elevation is a hard offset duplicate
+   of the ink border, never a soft blurred shadow.
+   ============================================================ */
+:root {
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 20px;  --sp-6: 24px;  --sp-7: 32px;  --sp-8: 40px;
+  --sp-9: 48px;  --sp-10: 64px; --sp-11: 96px;
+
+  /* Section padding follows the site's clamp() pattern */
+  --sp-section-y: clamp(36px, 5vw, 64px); /* @kind spacing */
+  --sp-section-x: clamp(20px, 3vw, 40px); /* @kind spacing */
+
+  /* ---------- RADIUS ---------- */
+  --radius: 0; /* every corner in this system is square, always */
+
+  /* ---------- BORDERS — the structural grid ---------- */
+  --border-thick: 3px solid var(--border-color); /* outer frame, section dividers, cards */
+  --border-thin:  2px solid var(--border-color); /* inner grid lines, nav cells */
+  --border-hair:  1px solid var(--divider-color);/* list-item dividers only */
+
+  /* ---------- HARD SHADOWS — offset duplicate, zero blur, zero spread ---------- */
+  --shadow-hard-sm: 4px 4px 0 var(--border-color);
+  --shadow-hard-md: 6px 6px 0 var(--border-color);
+  --shadow-hard-lg: 8px 8px 0 var(--border-color);
+  --shadow-hard-xl: 10px 10px 0 var(--border-color);
+}

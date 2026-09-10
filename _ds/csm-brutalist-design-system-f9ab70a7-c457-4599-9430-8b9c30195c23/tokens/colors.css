@@ -1,0 +1,35 @@
+/* ============================================================
+   CSM BRUTALIST — colors.css
+   Warm stone canvas, hard ink borders, one confident indigo.
+   No greys-from-nowhere: every neutral here is warm-toned.
+   ============================================================ */
+:root {
+  /* ---------- BASE PALETTE ---------- */
+  --csmb-ink:          #16151B; /* primary text + all structural borders */
+  --csmb-canvas:       #DAD7CE; /* page background, behind the paper sheet */
+  --csmb-paper:        #F2F0EA; /* primary surface: cards, header, nav */
+  --csmb-paper-alt:    #FBFAF6; /* raised/alt surface: services list, partnership grid cells */
+  --csmb-indigo:       #241B6B; /* the one accent: CTAs, active states, links, detail panel */
+  --csmb-indigo-tint:  #C9C4E8; /* secondary text/labels on indigo surfaces */
+  --csmb-indigo-tint-2:#DDDAF0; /* quote/callout text on indigo, slightly brighter */
+  --csmb-stone:        #44424C; /* secondary body text on paper */
+  --csmb-divider:      #D8D5CA; /* hairline dividers inside lists (not structural borders) */
+  --csmb-white:        #FFFFFF;
+
+  /* ---------- SEMANTIC ALIASES ---------- */
+  --surface-page:      var(--csmb-canvas);
+  --surface-card:      var(--csmb-paper);
+  --surface-card-alt:  var(--csmb-paper-alt);
+  --surface-inverse:   var(--csmb-indigo);  /* CTAs, active nav, detail panel, newsletter band */
+  --surface-ink:       var(--csmb-ink);     /* stat bar, footer-adjacent dark bands */
+
+  --text-primary:      var(--csmb-ink);
+  --text-secondary:    var(--csmb-stone);
+  --text-on-indigo:    var(--csmb-white);
+  --text-on-indigo-dim:var(--csmb-indigo-tint);
+  --text-on-ink:       var(--csmb-paper);
+  --text-accent:       var(--csmb-indigo);
+
+  --border-color:      var(--csmb-ink);     /* every structural border in this system is ink */
+  --divider-color:     var(--csmb-divider);
+}
