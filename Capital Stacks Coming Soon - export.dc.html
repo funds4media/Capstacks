@@ -25,6 +25,8 @@
     body{margin:0;background:#DAD7CE;font-family:'Space Grotesk',system-ui,sans-serif}
     a{color:#241B6B}
     a:hover{color:#16151B}
+    .cs-link{color:inherit;text-decoration:none}
+    .cs-link:hover{text-decoration:underline;text-underline-offset:3px}
     @media (max-width:799px){
       .cs-hdr{grid-template-columns:auto 1fr !important}
       .cs-hdr-cities{display:none !important}
@@ -39,7 +41,7 @@
 
   <div class="cs-hdr" style="display:grid;grid-template-columns:auto 1fr auto;border-bottom:3px solid #16151B">
     <div style="padding:14px 20px;border-right:3px solid #16151B;display:flex;align-items:center"><img src="./assets/diamond-indigo.png" alt="CSM" style="width:34px;height:34px"></div>
-    <div style="padding:14px 20px;display:flex;align-items:center;font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:-.01em;min-width:0">CENTER FOR SUSTAINABLE MEDIA</div>
+    <div style="padding:14px 20px;display:flex;align-items:center;font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:-.01em;min-width:0"><a class="cs-link" href="https://sustainablemedia.eu">CENTER FOR SUSTAINABLE MEDIA</a></div>
     <div class="cs-hdr-cities" style="padding:14px 20px;border-left:3px solid #16151B;display:flex;align-items:center;font-size:13px;font-weight:500">BUDAPEST—VIENNA—BRUSSELS</div>
   </div>
 
@@ -66,7 +68,7 @@
   <div style="padding:15px clamp(20px,3vw,40px);background:#16151B;color:#F2F0EA;font-weight:700;font-size:14px;letter-spacing:.04em">{{ countdown }}</div>
 
   <footer style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding:22px clamp(20px,3vw,40px);justify-content:space-between">
-    <span style="font-size:12px;font-weight:700;letter-spacing:.08em">© 2026 CENTER FOR SUSTAINABLE MEDIA</span>
+    <span style="font-size:12px;font-weight:700;letter-spacing:.08em">© 2026 <a class="cs-link" href="https://sustainablemedia.eu">CENTER FOR SUSTAINABLE MEDIA</a></span>
   </footer>
 </div>
 </x-dc>
