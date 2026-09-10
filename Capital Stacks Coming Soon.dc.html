@@ -17,24 +17,19 @@
     body{margin:0;background:#DAD7CE;font-family:'Space Grotesk',system-ui,sans-serif}
     a{color:#241B6B}
     a:hover{color:#16151B}
-    .cs-link{color:inherit;text-decoration:none}
-    .cs-link:hover{text-decoration:underline;text-underline-offset:3px}
     @media (max-width:799px){
-      .cs-hdr{grid-template-columns:auto 1fr !important}
-      .cs-hdr-cities{display:none !important}
-      .cs-meta{grid-template-columns:1fr !important}
-      .cs-meta > div{border-right:none !important}
-      .cs-meta > div:not(:last-child){border-bottom:2px solid #16151B !important}
+      .cs-meta,.cs-news{grid-template-columns:1fr !important}
+      .cs-meta > div,.cs-news > div{border-right:none !important}
+      .cs-meta > div:not(:last-child),.cs-news > div:not(:last-child){border-bottom:2px solid #16151B !important}
     }
   </style>
 </helmet>
 
 <div style="max-width:1280px;margin:0 auto;background:#F2F0EA;color:#16151B;min-height:100vh;border-left:3px solid #16151B;border-right:3px solid #16151B;display:flex;flex-direction:column">
 
-  <div class="cs-hdr" style="display:grid;grid-template-columns:auto 1fr auto;border-bottom:3px solid #16151B">
+  <div class="cs-hdr" style="display:grid;grid-template-columns:auto 1fr;border-bottom:3px solid #16151B">
     <div style="padding:14px 20px;border-right:3px solid #16151B;display:flex;align-items:center"><img src="./assets/diamond-indigo.png" alt="CSM" style="width:34px;height:34px"></div>
-    <div style="padding:14px 20px;display:flex;align-items:center;font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:-.01em;min-width:0"><a class="cs-link" href="https://sustainablemedia.eu">CENTER FOR SUSTAINABLE MEDIA</a></div>
-    <div class="cs-hdr-cities" style="padding:14px 20px;border-left:3px solid #16151B;display:flex;align-items:center;font-size:13px;font-weight:500">BUDAPEST—VIENNA—BRUSSELS</div>
+    <a href="https://sustainablemedia.eu" style="padding:14px 20px;display:flex;align-items:center;font-family:'Archivo Black',sans-serif;font-size:16px;letter-spacing:-.01em;min-width:0;color:#16151B;text-decoration:none" style-hover="background:#16151B;color:#F2F0EA">CENTER FOR SUSTAINABLE MEDIA</a>
   </div>
 
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,9vw,128px) clamp(20px,3vw,40px) clamp(48px,7vw,96px);border-bottom:3px solid #16151B">
@@ -42,36 +37,90 @@
     <p style="margin:36px 0 0;font-size:clamp(18px,2vw,24px);line-height:1.4;font-weight:500;max-width:40ch">The investable media playbook</p>
   </div>
 
-  <div class="cs-meta" style="display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:3px solid #16151B">
+  <div class="cs-meta" style="display:grid;grid-template-columns:1fr 1fr;border-bottom:3px solid #16151B">
     <div style="padding:22px 24px 26px;border-right:2px solid #16151B">
       <div style="font-size:11px;font-weight:700;letter-spacing:.12em;color:#241B6B;margin-bottom:10px">STATUS</div>
       <div style="font-family:'Archivo Black',sans-serif;font-size:22px;text-transform:uppercase;line-height:1.1">Coming soon</div>
     </div>
-    <div style="padding:22px 24px 26px;border-right:2px solid #16151B">
+    <div style="padding:22px 24px 26px">
       <div style="font-size:11px;font-weight:700;letter-spacing:.12em;color:#241B6B;margin-bottom:10px">PUBLICATION DATE</div>
       <div style="font-family:'Archivo Black',sans-serif;font-size:22px;text-transform:uppercase;line-height:1.1">29 September 2026</div>
-    </div>
-    <div style="padding:22px 24px 26px">
-      <div style="font-size:11px;font-weight:700;letter-spacing:.12em;color:#241B6B;margin-bottom:10px">PUBLISHED BY</div>
-      <div style="font-family:'Archivo Black',sans-serif;font-size:22px;text-transform:uppercase;line-height:1.1">Center for Sustainable Media</div>
     </div>
   </div>
 
   <div style="padding:15px clamp(20px,3vw,40px);background:#16151B;color:#F2F0EA;font-weight:700;font-size:14px;letter-spacing:.04em">{{ countdown }}</div>
 
-  <footer style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;padding:22px clamp(20px,3vw,40px);justify-content:space-between">
-    <span style="font-size:12px;font-weight:700;letter-spacing:.08em">© 2026 <a class="cs-link" href="https://sustainablemedia.eu">CENTER FOR SUSTAINABLE MEDIA</a></span>
+  <div class="cs-news" style="display:grid;grid-template-columns:1fr 1fr;background:#241B6B;color:#F2F0EA;border-top:3px solid #16151B;border-bottom:3px solid #16151B">
+    <div style="padding:clamp(36px,5vw,64px) clamp(20px,3vw,40px);border-right:2px solid #16151B;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.12em;margin-bottom:14px;opacity:.85">THE CAPITAL STACKS REPORT</div>
+        <div style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.4vw,44px);line-height:1;text-transform:uppercase">15 years of media investment and innovation</div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:.12em;margin-bottom:14px;opacity:.85">OUR NEWSLETTER</div>
+        <div style="font-family:'Archivo Black',sans-serif;font-size:clamp(28px,3.4vw,44px);line-height:1;text-transform:uppercase">Last week, every week</div>
+        <p style="margin:18px 0 0;font-size:16px;line-height:1.45;font-weight:500;max-width:38ch">Can't wait until 29 September? Media Finance Monitor covers media finance news, deals and funding every week.</p>
+      </div>
+    </div>
+    <div style="padding:clamp(36px,5vw,64px) clamp(20px,3vw,40px);display:flex;flex-direction:column;justify-content:center">
+      <a href="{{ rssLink }}" style="display:block;background:#F2F0EA;color:#16151B;border:2px solid #16151B;box-shadow:4px 4px 0 #16151B;padding:18px 20px;text-decoration:none" style-hover="background:#16151B;color:#F2F0EA">
+        {{ rssImageEl }}
+        <div style="font-size:11px;font-weight:700;letter-spacing:.12em;margin-bottom:10px">LATEST ISSUE · {{ rssDate }}</div>
+        <div style="font-family:'Archivo Black',sans-serif;font-size:18px;line-height:1.15;text-transform:uppercase">{{ rssTitle }}</div>
+        <sc-if value="{{ hasDesc }}" hint-placeholder-val="{{ false }}"><p style="margin:10px 0 0;font-size:14px;line-height:1.4;font-weight:500">{{ rssDesc }}</p></sc-if>
+        <div style="margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.08em">READ ON FUNDS4MEDIA.ORG →</div>
+      </a>
+    </div>
+  </div>
+
+  <footer style="display:flex;align-items:center;padding:22px clamp(20px,3vw,40px)">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.08em">© 2026 CENTER FOR SUSTAINABLE MEDIA</span>
   </footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;showCountdown&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
 class Component extends DCLogic {
+  state = { rss: null };
+  componentDidMount() {
+    const feed = 'https://www.funds4media.org/feed';
+    const apply = (title, desc, link, pub, image) => {
+      const d = new Date(pub);
+      this.setState({ rss: {
+        title: (title || '').trim(),
+        desc: (desc || '').replace(/<[^>]+>/g, '').trim(),
+        image: image || '',
+        link: (link || '').trim() || 'https://www.funds4media.org',
+        date: isNaN(d) ? '' : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).toUpperCase()
+      }});
+    };
+    const viaJson = () => fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(feed))
+      .then(r => r.json()).then(j => {
+        const it = j && j.items && j.items[0];
+        if (!it) throw new Error('no item');
+        const m = /<img[^>]+src="([^"]+)"/i.exec((it.content || '') + (it.description || ''));
+        apply(it.title, it.description, it.link, it.pubDate, it.thumbnail || (it.enclosure && it.enclosure.link) || (m && m[1]));
+      });
+    const viaXml = () => fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(feed))
+      .then(r => r.text()).then(xml => {
+        const item = new DOMParser().parseFromString(xml, 'text/xml').querySelector('item');
+        if (!item) throw new Error('no item');
+        const g = t => (item.querySelector(t) || {}).textContent || '';
+        const enc = item.querySelector('enclosure');
+        const m = /<img[^>]+src="([^"]+)"/i.exec(g('encoded') + g('description'));
+        apply(g('title'), g('description'), g('link'), g('pubDate'), (enc && enc.getAttribute('url')) || (m && m[1]));
+      });
+    viaJson().catch(() => viaXml().catch(() => {}));
+  }
   renderVals() {
+    const r = this.state.rss;
+    const rssImageEl = r && r.image ? React.createElement('img', { src: r.image, alt: '', style: { display: 'block', width: '100%', aspectRatio: '16/9', objectFit: 'cover', border: '2px solid #16151B', marginBottom: 16 } }) : null;
+    const rssVals = r ? { rssTitle: r.title, rssDesc: r.desc, rssLink: r.link, rssDate: r.date, hasDesc: !!r.desc, rssImageEl }
+      : { rssTitle: 'Media Finance Monitor', rssDesc: '', rssLink: 'https://www.funds4media.org', rssDate: 'WEEKLY', hasDesc: false, rssImageEl: null };
     const launch = new Date('2026-09-29T00:00:00');
     const days = Math.max(0, Math.ceil((launch - new Date()) / 86400000));
     const show = this.props.showCountdown ?? true;
     const label = days === 0 ? 'PUBLISHED TODAY' : days + (days === 1 ? ' DAY' : ' DAYS') + ' UNTIL PUBLICATION';
-    return { countdown: show ? label : 'PUBLICATION · 29 SEPTEMBER 2026' };
+    return { ...rssVals, countdown: show ? label : 'PUBLICATION · 29 SEPTEMBER 2026' };
   }
 }
 </script>
